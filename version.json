@@ -2,10 +2,15 @@
     "main": "1.1.11",
     "sub": "1.0.0",
     "main_versions": [
-        "1.1.10",
-        "1.1.11"
+        {
+            "version": "1.1.11",
+            "md5": "not update file"
+        }
     ],
     "sub_versions": [
-        "1.0.0"
+        {
+            "version": "1.0.0",
+            "md5": "not update file"
+        }
     ]
 }
