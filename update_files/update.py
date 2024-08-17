@@ -17,7 +17,9 @@ def md5(filename):
 
 
 def doUpdate(filename):
-    os.system("kill $(ps aux | grep 'xtreamcodes' | grep -v grep | grep -v 'start_services.sh' | awk '{print $2}') 2>/dev/null")
+    os.system(
+        "kill $(ps aux | grep 'xtreamcodes' | grep -v grep | grep -v 'start_services.sh' | awk '{print $2}') 2>/dev/null"
+    )
     os.system('sudo tar -zxvf "%s" -C "%s"' % (filename, baseDir))
     os.system('sudo chown -R xtreamcodes:xtreamcodes "%s"' % baseDir)
     os.system(f"sudo {baseDir}permissions.sh")
