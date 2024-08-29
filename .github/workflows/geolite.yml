@@ -23,11 +23,11 @@ jobs:
         wget -nv -O- "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=${{ secrets.LICENSE_KEY_MAXMIND }}&suffix=tar.gz" | tar zxv   
         cp -v GeoLite*/*.mmdb Xtream_Update
         echo "TAG_NAME=$(date +"%d.%m.%y")" >> $GITHUB_ENV 
-    - name: Edit Json
-      shell: bash
-      run: |
-        cd Xtream_Update
-        echo $(jq --arg a "${{ env.TAG_NAME }}" '.version = ($a)' status.json) > status.json
+    # - name: Edit Json
+    #   shell: bash
+    #   run: |
+    #     cd Xtream_Update
+    #     echo $(jq --arg a "${{ env.TAG_NAME }}" '.version = ($a)' status.json) > status.json
     # - name: Push to "download" branch
     #   run: |
     #     cd Xtream_Update
