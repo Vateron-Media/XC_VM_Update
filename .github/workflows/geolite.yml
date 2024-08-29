@@ -32,7 +32,7 @@ jobs:
         cd Xtream_Update
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor }}@users.noreply.github.com"
-        git lfs track "*.mmdb"
+        # git lfs track "*.mmdb"
         git add .gitattributes
         git add .
         git commit -m "${{ env.TAG_NAME }}"
