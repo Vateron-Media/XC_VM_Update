@@ -51,7 +51,7 @@ jobs:
     - name: Remove old Releases
       uses: Nats-ji/delete-old-releases@v1.0.1
       with:
+        token: ${{ secrets.GITHUB_TOKEN }}
         keep-count: 2
         keep-old-minor-releases: false
         remove-tags: true
-        token: ${{ secrets.GITHUB_TOKEN }}
