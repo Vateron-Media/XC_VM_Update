@@ -54,5 +54,4 @@ jobs:
         keep-count: 2
         keep-old-minor-releases: false
         remove-tags: true
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
