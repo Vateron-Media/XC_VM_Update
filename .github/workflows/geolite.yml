@@ -49,9 +49,10 @@ jobs:
           Xtream_Update/*.mmdb
 
     - name: Remove old Releases
-      uses: dev-drprasad/delete-older-releases@v0.2.0
+      uses: Nats-ji/delete-old-releases@v1.0.1
       with:
-        keep_latest: 2
-        delete_tags: true
+        keep-count: 2
+        keep-old-minor-releases: false
+        remove-tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
