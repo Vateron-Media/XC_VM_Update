@@ -6,9 +6,12 @@
         ]
     },
     {
-        "version": "1.0.0.1",
+        "version": "1.0.1",
         "changes": [
-            "Check updates"
+            "Fixed log sending.",
+            "Updated links to api for receiving updates.",
+            "Removed revision.",
+            "Fixed process monitor."
         ]
     }
 ]
