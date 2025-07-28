@@ -4,5 +4,11 @@
         "changes": [
             "Initial release"
         ]
+    },
+    {
+        "version": "v1.0.0.1",
+        "changes": [
+            "Check updates"
+        ]
     }
 ]
