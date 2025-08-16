@@ -22,5 +22,17 @@
             "Fixed a bug in network statistics update",
             "Archives for updating and installing lb have been removed from the control panel to reduce the size of the repository"
         ]
+    },
+    {
+        "version": "1.0.3",
+        "changes": [
+            "Bug fixes in VOD playback and transcoding",
+            "Fixed reseller creation errors and EPGs page issues",
+            "Fixed incorrect asset paths",
+            "Refactoring and stability improvements",
+            "Removed Redis cleanup after update",
+            "Dropped PHP version switching logic",
+            "Updated documentation"
+        ]
     }
 ]
