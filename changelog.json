@@ -34,5 +34,17 @@
             "Dropped PHP version switching logic",
             "Updated documentation"
         ]
+    },
+    {
+        "version": "1.0.4",
+        "changes": [
+            "Fix white screen when installing lb",
+            "Replace the function of sending panel logs with downloading the panel log file",
+            "Moved all JavaScript from footer.php into separate files to reduce file size and improve code clarity",
+            "Refactor EPG API handling and remove unused functions",
+            "Fixed epg handler and added log output to console",
+            "Fixed nesting of conditions to improve code readability",
+            "Fixed UI for selecting EPG channel in stream"
+        ]
     }
 ]
