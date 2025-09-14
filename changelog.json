@@ -58,5 +58,14 @@
             "Fixed JavaScript logic bug",
             "Documentation updates and improvements"
         ]
+    },
+    {
+        "version": "1.1.1",
+        "changes": [
+            "Updated FFmpeg docs and rebuilt FFmpeg 8.0 & 7.1",
+            "Added Xtream Codes API documentation",
+            "Multiple bug fixes for movies, TV series, bouquets, and API",
+            "Improved stability and documentation"
+        ]
     }
 ]
