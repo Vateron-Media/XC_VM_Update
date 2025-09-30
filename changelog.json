@@ -89,5 +89,13 @@
             "Moved JavaScript from footer to separate files for better readability",
             "Removed obsolete code and parameters, including auto_send_logs"
         ]
+    },
+    {
+        "version": "1.1.4",
+        "highlights": [
+            "Fixed empty server order",
+            "Fixed modal windows",
+            "General issue fixes"
+        ]
     }
 ]
