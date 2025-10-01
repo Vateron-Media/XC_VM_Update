@@ -80,7 +80,7 @@
     },
     {
         "version": "1.1.3",
-        "highlights": [
+        "changes": [
             "Added info tab to Settings",
             "Improved web player initialization and removed redundant code",
             "Added logging to Certbot and fixed getCertificateInfo function",
@@ -92,7 +92,7 @@
     },
     {
         "version": "1.1.4",
-        "highlights": [
+        "changes": [
             "Fixed empty server order",
             "Fixed modal windows",
             "General issue fixes"
