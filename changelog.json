@@ -97,5 +97,14 @@
             "Fixed modal windows",
             "General issue fixes"
         ]
+    },
+    {
+        "version": "1.2.0",
+        "changes": [
+            "Added Ubuntu 24 support",
+            "Improved backup and installation scripts",
+            "Updated documentation and migration guide",
+            "Fixed SSL, migration, and status issues"
+        ]
     }
 ]
