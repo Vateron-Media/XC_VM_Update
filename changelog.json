@@ -106,5 +106,12 @@
             "Updated documentation and migration guide",
             "Fixed SSL, migration, and status issues"
         ]
+    },
+    {
+        "version": "1.2.1",
+        "changes": [
+            "Added libraries and CRON to installers",
+            "Fixed search bar, exceptions, and series adding"
+        ]
     }
 ]
