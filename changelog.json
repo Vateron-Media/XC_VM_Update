@@ -113,5 +113,13 @@
             "Added libraries and CRON to installers",
             "Fixed search bar, exceptions, and series adding"
         ]
+    },
+    {
+        "version": "1.2.2",
+        "changes": [
+            "Added XUI → XC_VM migration",
+            "Fixed status and lb_update issues",
+            "Reviewed core scripts and cleaned up code"
+        ]
     }
 ]
