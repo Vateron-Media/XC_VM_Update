@@ -121,5 +121,13 @@
             "Fixed status and lb_update issues",
             "Reviewed core scripts and cleaned up code"
         ]
+    },
+    {
+        "version": "1.2.3",
+        "changes": [
+            "Added proxy server support and incremental LB updates",
+            "Unified shared classes in web player",
+            "Improved error display and installer behavior"
+        ]
     }
 ]
