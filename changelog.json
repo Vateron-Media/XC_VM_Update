@@ -129,5 +129,13 @@
             "Unified shared classes in web player",
             "Improved error display and installer behavior"
         ]
+    },
+    {
+        "version": "1.2.4",
+        "changes": [
+            "Added SSL certificate generation and update guide",
+            "Rewritten file deletion generator",
+            "Fixed undefined variable issues"
+        ]
     }
 ]
