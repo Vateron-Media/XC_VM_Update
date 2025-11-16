@@ -137,5 +137,13 @@
             "Rewritten file deletion generator",
             "Fixed undefined variable issues"
         ]
+    },
+    {
+        "version": "1.2.5",
+        "changes": [
+            "Added logging and auto log sending",
+            "Support for unstable GitHub releases",
+            "Fixed database and package.php errors"
+        ]
     }
 ]
