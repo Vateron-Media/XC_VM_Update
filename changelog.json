@@ -145,5 +145,14 @@
             "Support for unstable GitHub releases",
             "Fixed database and package.php errors"
         ]
+    },
+    {
+        "version": "1.2.7",
+        "changes": [
+            "Added multilingual support and language switching",
+            "Optimized heavy DB queries and improved core features",
+            "Added TMDB auto-import and FFmpeg updates",
+            "Fixed LB reinstalling, on-demand, and many small bugs"
+        ]
     }
 ]
