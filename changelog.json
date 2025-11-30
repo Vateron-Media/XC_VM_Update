@@ -154,5 +154,15 @@
             "Added TMDB auto-import and FFmpeg updates",
             "Fixed LB reinstalling, on-demand, and many small bugs"
         ]
+    },
+    {
+        "version": "1.2.8",
+        "changes": [
+            "Plex synchronization refactored",
+            "Added Ubuntu 20.x support with libssl3",
+            "Mass localization updates and translation fixes",
+            "Removed legacy code and updated database",
+            "Added mass_edit_streams and CLI error display"
+        ]
     }
 ]
