@@ -164,5 +164,31 @@
             "Removed legacy code and updated database",
             "Added mass_edit_streams and CLI error display"
         ]
-    }
+    },
+    {
+    "version": "1.2.10",
+    "changes": [
+        "Improved HLS stream URL generation",
+        "Enhanced FFprobe robustness and probesize validation",
+        "Added infinite off-air video generation",
+        "Reviewed profile.php and mass_delete.php",
+        "Improved ondemand playlist generation",
+        "Corrected logic in users.php",
+        "Disabled log sending in development mode",
+        "Set default FFMPEG segment type to -f hls",
+        "Removed deprecated -f segment flag",
+        "Updated Geo2 Lite and Geo2 ISP databases",
+        "Updated MariaDB to version 11.4",
+        "Fixed queue.php and multiple exceptions",
+        "Fixed 414 Request-URI Too Large",
+        "Fixed panel restart and empty rating errors",
+        "Improved response data handling",
+        "Added skip_ffprobe and force_input_acodec stream options",
+        "Updated .gitignore to exclude local configs",
+        "Added auto editing of Top Contributors",
+        "Updated UI window width in settings",
+        "Updated README and workflows"
+    ]
+}
+
 ]
