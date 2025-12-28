@@ -166,29 +166,51 @@
         ]
     },
     {
-    "version": "1.2.10",
-    "changes": [
-        "Improved HLS stream URL generation",
-        "Enhanced FFprobe robustness and probesize validation",
-        "Added infinite off-air video generation",
-        "Reviewed profile.php and mass_delete.php",
-        "Improved ondemand playlist generation",
-        "Corrected logic in users.php",
-        "Disabled log sending in development mode",
-        "Set default FFMPEG segment type to -f hls",
-        "Removed deprecated -f segment flag",
-        "Updated Geo2 Lite and Geo2 ISP databases",
-        "Updated MariaDB to version 11.4",
-        "Fixed queue.php and multiple exceptions",
-        "Fixed 414 Request-URI Too Large",
-        "Fixed panel restart and empty rating errors",
-        "Improved response data handling",
-        "Added skip_ffprobe and force_input_acodec stream options",
-        "Updated .gitignore to exclude local configs",
-        "Added auto editing of Top Contributors",
-        "Updated UI window width in settings",
-        "Updated README and workflows"
-    ]
-}
-
+        "version": "1.2.10",
+        "changes": [
+            "Improved HLS stream URL generation",
+            "Enhanced FFprobe robustness and probesize validation",
+            "Added infinite off-air video generation",
+            "Reviewed profile.php and mass_delete.php",
+            "Improved ondemand playlist generation",
+            "Corrected logic in users.php",
+            "Disabled log sending in development mode",
+            "Set default FFMPEG segment type to -f hls",
+            "Removed deprecated -f segment flag",
+            "Updated Geo2 Lite and Geo2 ISP databases",
+            "Updated MariaDB to version 11.4",
+            "Fixed queue.php and multiple exceptions",
+            "Fixed 414 Request-URI Too Large",
+            "Fixed panel restart and empty rating errors",
+            "Improved response data handling",
+            "Added skip_ffprobe and force_input_acodec stream options",
+            "Updated .gitignore to exclude local configs",
+            "Added auto editing of Top Contributors",
+            "Updated UI window width in settings",
+            "Updated README and workflows"
+        ]
+    },
+    {
+        "version": "1.2.11",
+        "changes": [
+            "Added French language support",
+            "Improved RTL language handling for TV series",
+            "Refactored EPG processing and XMLTV generation",
+            "Added support for x-tvg-url in M3U device headers",
+            "Introduced centralized log management using the new Logger class",
+            "Extended panel_logs table and improved error and exception handling",
+            "Improved API default value handling and removed escapeshellcmd usage for URLs",
+            "Updated MobileDetect to version 2.8.45",
+            "Replaced MySQL with MariaDB and added automatic memory calculation",
+            "Fixed MariaDB process detection to use mariadbd",
+            "Added automatic MariaDB restart on crash with optional disable stub",
+            "Fixed used memory calculation",
+            "Fixed receiving streams without category",
+            "Fixed LLOD v3 issues",
+            "Fixed exceptions in users.php",
+            "Resolved multiple warnings and info-level errors",
+            "Improved folder-based name detection",
+            "Fixed warnings during /tmp cleanup"
+        ]
+    }
 ]
