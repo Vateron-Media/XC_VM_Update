@@ -212,5 +212,23 @@
             "Improved folder-based name detection",
             "Fixed warnings during /tmp cleanup"
         ]
+    },
+    {
+        "version": "1.2.12",
+        "changes": [
+            "Improved compatibility with various players",
+            "Added German and Bulgarian language translations",
+            "Fixed translation keys and quoting issues",
+            "Moved translations to the correct folder structure",
+            "Added automatic MAIN IP update when mismatch is detected",
+            "Refactored live.php and reviewed mag.php",
+            "Added Stalker debug mode",
+            "Added clear log button to panel_logs",
+            "Fixed data type issue in get_vod_streams",
+            "Fixed exception when adding logo during transcoding",
+            "Corrected nginx configuration file paths",
+            "Removed blkid binaries",
+            "Fixed multiple conditions, warnings, and exceptions"
+        ]
     }
 ]
