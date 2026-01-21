@@ -230,5 +230,16 @@
             "Removed blkid binaries",
             "Fixed multiple conditions, warnings, and exceptions"
         ]
+    },
+    {
+        "version": "1.2.13",
+        "changes": [
+            "Rewritten isStreamRunning() function to optimize MPEGTS streaming",
+            "Fixed errors related to LLOD and MPEGTS stream output",
+            "Fixed exception when receiving settings",
+            "Fixed log file creation issue when files are owned by root",
+            "Removed unused labels in monitor.php to reduce code complexity",
+            "Improved code readability and performed general bug fixes"
+        ]
     }
 ]
