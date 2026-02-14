@@ -241,5 +241,17 @@
             "Removed unused labels in monitor.php to reduce code complexity",
             "Improved code readability and performed general bug fixes"
         ]
+    },
+    {
+        "version": "1.2.15",
+        "changes": [
+            "Refactored internal code for better stability and readability",
+            "Fixed local IP blocking in root_signals",
+            "Added provider migration support",
+            "Updated logo and favicon assets",
+            "Fixed missing transcoding profiles when importing TV series",
+            "Resolved CoreUtilities error related to string offset access",
+            "Added automatic generation of live_streaming_pass in System API when empty"
+        ]
     }
 ]
