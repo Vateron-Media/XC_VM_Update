@@ -253,5 +253,15 @@
             "Resolved CoreUtilities error related to string offset access",
             "Added automatic generation of live_streaming_pass in System API when empty"
         ]
+    },
+    {
+        "version": "1.2.16",
+        "changes": [
+            "Updated interface text messages for improved clarity",
+            "Improved performance and load handling during mass stream operations",
+            "Refactored asynchronous process monitoring and file input/output handling",
+            "Reorganized project structure by moving AsyncFileOperations.php",
+            "Updated internal logic in vod.php",
+        ]
     }
 ]
