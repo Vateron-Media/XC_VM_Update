@@ -263,5 +263,32 @@
             "Reorganized project structure by moving AsyncFileOperations.php",
             "Updated internal logic in vod.php",
         ]
+    },
+    {
+        "version": "2.0.0",
+        "changes": [
+            "Complete architecture redesign introducing layered project structure",
+            "Added ServiceContainer for dependency management",
+            "Implemented new tokenizer-based autoloader with igbinary caching",
+            "Introduced Front Controller and HTTP Router for admin and reseller panels",
+            "Unified API layer with dedicated controllers for Player API, Enigma2 API, Playlist API, XMLTV API and Internal API",
+            "Introduced console.php as unified CLI runner replacing legacy cron and CLI scripts",
+            "Added command registry and CLI framework for daemons and cron jobs",
+            "Introduced streaming middleware and unified shutdown lifecycle handlers",
+            "Added module system with ModuleInterface and ModuleLoader",
+            "Extracted built-in modules including Plex, TMDB, Watch and Ministra",
+            "Migrated web player from JW Player to Video.js",
+            "Refactored webplayer structure and moved views to public/Views",
+            "Improved FFmpeg configuration handling and API request validation",
+            "Improved EPG processing and bouquet cron job logic",
+            "Improved Makefile build process and file permission security",
+            "Added CI workflows including PHP syntax checks and Semgrep security scans",
+            "Hardened binary endpoints against MIME sniffing XSS",
+            "Removed legacy monolithic utilities and duplicate controller conflicts",
+            "Removed legacy CLI scripts and admin API monolith",
+            "Added full Docsify documentation in English and Russian",
+            "Updated installation, migration and documentation links",
+            "Refactored codebase to reduce global variables and improve maintainability"
+        ]
     }
 ]
