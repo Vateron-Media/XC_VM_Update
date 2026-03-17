@@ -261,7 +261,7 @@
             "Improved performance and load handling during mass stream operations",
             "Refactored asynchronous process monitoring and file input/output handling",
             "Reorganized project structure by moving AsyncFileOperations.php",
-            "Updated internal logic in vod.php",
+            "Updated internal logic in vod.php"
         ]
     },
     {
@@ -289,6 +289,27 @@
             "Added full Docsify documentation in English and Russian",
             "Updated installation, migration and documentation links",
             "Refactored codebase to reduce global variables and improve maintainability"
+        ]
+    },
+    {
+        "version": "2.0.1",
+        "changes": [
+            "Added module system documentation and technical specification",
+            "Updated all modules to ModuleInterface v2 with registerCommands(), install/uninstall, auto-discovery",
+            "Moved CLI module commands from cli/ to modules/ for better separation",
+            "Refactored console commands: manual registration replaced with auto-discovery",
+            "Added FFmpeg auto-builder script for Docker-based builds",
+            "Improved autoloader cache handling on startup",
+            "Enhanced FileLogger with caller file tracking and improved ErrorsCronJob",
+            "Updated LB build to support module system",
+            "Improved MonitorCommand failure handling and process termination",
+            "Increased API request timeout for mass stream operations",
+            "Fixed player session redirects to support XC_CODE",
+            "Loaded admin.php bootstrap correctly in PlayerLoginController",
+            "Prevented redeclarations in tmdb using include_once/require_once",
+            "Updated GitHub workflows: checkout v6, manual dispatch, dynamic tag resolution",
+            "Removed duplicate release asset entries",
+            "Merged main branch and applied minor chore/fix updates"
         ]
     }
 ]
