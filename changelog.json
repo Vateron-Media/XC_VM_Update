@@ -311,5 +311,40 @@
             "Removed duplicate release asset entries",
             "Merged main branch and applied minor chore/fix updates"
         ]
+    },
+    {
+        "version": "2.0.2",
+        "changes": [
+            "Updated documentation UI with dark theme and improved sidebar",
+            "Refactored admin curl handling and modal propagation",
+            "Unified resize handlers into resize_body.php and added admin route",
+            "Consolidated proxy and wrapper classes and improved code patterns",
+            "Moved language files from includes to resources directory",
+            "Integrated bootstrap into XC_Bootstrap",
+            "Improved API uptime fallback using servers_stats and watchdog",
+            "Fixed null handling in RadioService for bouquet and category lists",
+            "Fixed API null-safety issues in probeSource and codec metadata",
+            "Fixed undefined array keys and TypeErrors across admin and API",
+            "Fixed server POST validation and null-safety",
+            "Fixed SSL certificate parsing in DiagnosticsService",
+            "Fixed cron jobs and watchdog post-install errors",
+            "Improved Redis configuration and connection stability",
+            "Fixed bootstrap initialization for admin context",
+            "Added Redis configuration update script",
+            "Enhanced release workflow notifier with tag and name inputs",
+            "Replaced unsafe checks with empty() and null coalescing operators",
+            "Removed deprecated resize handlers",
+            "Migrated legacy proxy files to console.php",
+            "Refactored module controllers layout and viewsPath handling",
+            "Overhauled GitHub issue templates",
+            "Added AGPL-3.0 legal notice to README",
+            "Added standardized PHP file headers",
+            "Updated CLI, architecture and migration documentation",
+            "Added module controller creation guide",
+            "Removed deprecated FFmpeg binaries",
+            "Removed legacy scripts and dead code",
+            "Improved m3u handling and review page",
+            "Updated issue templates and repository links"
+        ]
     }
 ]
