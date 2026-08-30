@@ -9,25 +9,43 @@ on:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 60
 
     steps:
+    - name: Checkout (build script)
+      uses: actions/checkout@v4
+
     - name: Download GeoLite.mmdb
       run: |
         mkdir -p Xtream_Update
         wget -nv -O- "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-ASN&license_key=${{ secrets.LICENSE_KEY_MAXMIND }}&suffix=tar.gz" | tar zxv
         wget -nv -O- "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&license_key=${{ secrets.LICENSE_KEY_MAXMIND }}&suffix=tar.gz" | tar zxv
-        wget -nv -O- "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=${{ secrets.LICENSE_KEY_MAXMIND }}&suffix=tar.gz" | tar zxv   
+        wget -nv -O- "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=${{ secrets.LICENSE_KEY_MAXMIND }}&suffix=tar.gz" | tar zxv
         cp -v GeoLite*/*.mmdb Xtream_Update
         echo "TAG_NAME=$(date +"%d.%m.%y")" >> $GITHUB_ENV
-    
+
+    # Build the open-data ASN catalog (blocked_asns.json.gz) and a free IP->ISP
+    # database (GeoIP2-ISP.mmdb) from the just-downloaded GeoLite2-ASN.mmdb plus
+    # RIPE asn.txt / RIR delegated / PeeringDB / bulk-whois. Non-blocking: a flaky
+    # upstream source must not stop the GeoLite2 release from publishing.
+    - name: Build ASN catalog + ISP database
+      continue-on-error: true
+      run: |
+        python3 -m pip install --quiet --upgrade requests maxminddb mmdb_writer netaddr
+        python3 build_isp_db.py \
+          --asn-mmdb Xtream_Update/GeoLite2-ASN.mmdb \
+          --asn-json Xtream_Update/blocked_asns.json \
+          --mmdb-out Xtream_Update/GeoIP2-ISP.mmdb
+        gzip -9 -f Xtream_Update/blocked_asns.json
+
     - name: Generate hashes.md5
       run: |
         cd Xtream_Update
         md5sum *.mmdb > hashes.md5
+        [ -f blocked_asns.json.gz ] && md5sum blocked_asns.json.gz >> hashes.md5
         echo "Generated hashes:"
         cat hashes.md5
-    
+
     - name: Upload to Releases
       uses: softprops/action-gh-release@v1
       env:
@@ -37,6 +55,7 @@ jobs:
         body: ${{ env.TAG_NAME }}
         files: |
           Xtream_Update/*.mmdb
+          Xtream_Update/blocked_asns.json.gz
           Xtream_Update/hashes.md5
 
     - name: Remove old Releases
@@ -46,7 +65,7 @@ jobs:
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
+
     - name: Delete workflow runs
       uses: Mattraks/delete-workflow-runs@main
       with:
